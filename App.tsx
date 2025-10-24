@@ -1,13 +1,13 @@
 import { View, Text, FlatList, ScrollView } from 'react-native';
 import "nativewind"
 import './global.css'
-import Header from "components/header"
+import Header from "./components/header"
 import { useState, useEffect } from 'react'
-import Search from 'components/search'
-import Spinner from 'components/spinner'
-import MovieCard from 'components/movieCard'
-import TrendingMovies from 'components/trendingMovies'
-import { getTrendingMovies, updateSearchCount } from 'appwrite'
+import Search from './components/search'
+import Spinner from './components/spinner'
+import MovieCard from './components/movieCard'
+import TrendingMovies from './components/trendingMovies'
+import { getTrendingMovies, updateSearchCount } from './appwrite'
 import {Movie, TrendingMovie } from "./types/movie"
 
 const API_BASE_URL = 'https://api.themoviedb.org/3'
