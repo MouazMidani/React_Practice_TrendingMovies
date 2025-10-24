@@ -12,7 +12,7 @@ This project serves as a hands-on practice application developed by following a 
   * **Styling:** Introduces and utilizes **Tailwind CSS v4** for utility-first styling, covering installation, configuration with and applying utility classes.
   * **API Integration:** Fetches real-time movie data from **The Movie Database (TMDB) API**, utilizing modern React Native features.
   * **Design & Assets:** The project is based on a **Green forest design** I have Implemented, and assets (images/SVGs like `star.svg`, `hero.png`, `search.svg`, etc.) are managed in the `public` folder.
-  * **Hosting:** The initial hosting setup is complete.
+  * **Hosting:** The initial hosting setup is complete. [View the project](https://trending-movies-em45.onrender.com)
 
 -----
 
