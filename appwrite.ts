@@ -1,10 +1,21 @@
 import { Client, Query, Databases , ID, Models } from "react-native-appwrite";
 import { TrendingMovie } from "types/movie";
+import Constants from 'expo-constants';
+const PROJECT_ID =
+  process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID ||
+  Constants.expoConfig?.extra?.EXPO_PUBLIC_APPWRITE_PROJECT_ID;
 
-const PROJECT_ID = process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID as string
-const DATABASE_ID = process.env.EXPO_PUBLIC_MOVIE_DATABASE_ID as string
-const METRICS_ID = process.env.EXPO_PUBLIC_MOVIE_METRICS_ID as string
-const ENDPOINT = process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT as string
+const DATABASE_ID =
+  process.env.EXPO_PUBLIC_MOVIE_DATABASE_ID ||
+  Constants.expoConfig?.extra?.EXPO_PUBLIC_MOVIE_DATABASE_ID;
+
+const METRICS_ID =
+  process.env.EXPO_PUBLIC_MOVIE_METRICS_ID ||
+  Constants.expoConfig?.extra?.EXPO_PUBLIC_MOVIE_METRICS_ID;
+
+const ENDPOINT =
+  process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT ||
+  Constants.expoConfig?.extra?.EXPO_PUBLIC_APPWRITE_ENDPOINT;
 
 const client = new Client()
     .setEndpoint(ENDPOINT)

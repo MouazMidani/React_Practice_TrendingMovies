@@ -10,8 +10,12 @@ import TrendingMovies from './components/trendingMovies'
 import { getTrendingMovies, updateSearchCount } from './appwrite'
 import {Movie, TrendingMovie } from "./types/movie"
 
+import Constants from 'expo-constants';
+
 const API_BASE_URL = 'https://api.themoviedb.org/3'
-const API_KEY = process.env.EXPO_PUBLIC_TMDB_API_READ_KEY as string
+const API_KEY =
+  process.env.EXPO_PUBLIC_TMDB_API_READ_KEY ||
+  Constants.expoConfig?.extra?.EXPO_PUBLIC_TMDB_API_READ_KEY;
 const API_OPTIONS = {
   method: 'GET',
   headers: {
